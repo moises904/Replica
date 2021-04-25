@@ -7,25 +7,49 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: UIViewController, IBaseViewController {
 
+    private let splashViewModel: SplashViewModel = SplashViewModel()
+    private var dataConfigurationModel : DataConfigurationModel = DataConfigurationModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initSplash()
+        registerObservers()
+        callDataConfiguration()
     }
     
-    private func initSplash() {
-        Timer.scheduledTimer(timeInterval: 3, target: self,
+    private func initSplash(dataConfigurationModel: DataConfigurationModel) {
+        
+        Timer.scheduledTimer(timeInterval: TimeInterval(dataConfigurationModel.timeSplash),
+                             target: self,
                              selector: #selector(goToLogin), userInfo:nil, repeats: false)
         
     }
 
     @objc private func goToLogin() {
-        
         let storyboard =  UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(identifier: "LoginStoryboardID")
         self.navigationController?.pushViewController(loginViewController, animated: true)
         
+    }
+    
+    private func callDataConfiguration() {
+        splashViewModel.getDataConfigInitial()
+        
+    }
+    
+    func registerObservers() {
+    
+        self.splashViewModel.dataConfigurationLiveData?.observe {
+            configuration in
+            if( configuration.timeSplash>0) {
+                self.dataConfigurationModel = configuration
+                self.initSplash(dataConfigurationModel: self.dataConfigurationModel)
+            }
+            
+        }
+        
+
     }
 
 }
