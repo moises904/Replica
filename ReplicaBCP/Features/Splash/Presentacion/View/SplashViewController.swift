@@ -30,9 +30,9 @@ class SplashViewController: UIViewController, IBaseViewController {
 
     @objc private func goToLogin() {
         let storyboard =  UIStoryboard(name: "Login", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(identifier: "LoginStoryboardID")
-        
-        self.navigationController?.pushViewController(loginViewController, animated: true)
+        let loginViewController = storyboard.instantiateViewController(identifier: "LoginStoryboardID") as? LoginViewController
+        loginViewController?.setDataConfiguration(dataConfiguration: self.dataConfigurationModel!)
+        self.navigationController?.pushViewController((loginViewController!), animated: true)
         
     }
     
