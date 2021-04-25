@@ -10,7 +10,7 @@ import UIKit
 class SplashViewController: UIViewController, IBaseViewController {
 
     private let splashViewModel: SplashViewModel = SplashViewModel()
-    private var dataConfigurationModel : DataConfigurationModel = DataConfigurationModel()
+    private var dataConfigurationModel : DataConfigurationModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +18,20 @@ class SplashViewController: UIViewController, IBaseViewController {
         callDataConfiguration()
     }
     
-    private func initSplash(dataConfigurationModel: DataConfigurationModel) {
+    private func initSplash(dataConfigurationModel: DataConfigurationModel?) {
         
-        Timer.scheduledTimer(timeInterval: TimeInterval(dataConfigurationModel.timeSplash),
+        if (dataConfigurationModel != nil) {
+        Timer.scheduledTimer(timeInterval: TimeInterval(dataConfigurationModel!.timeSplash),
                              target: self,
                              selector: #selector(goToLogin), userInfo:nil, repeats: false)
+        }
         
     }
 
     @objc private func goToLogin() {
         let storyboard =  UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(identifier: "LoginStoryboardID")
+        
         self.navigationController?.pushViewController(loginViewController, animated: true)
         
     }
@@ -42,7 +45,7 @@ class SplashViewController: UIViewController, IBaseViewController {
     
         self.splashViewModel.dataConfigurationLiveData?.observe {
             configuration in
-            if( configuration.timeSplash>0) {
+            if( configuration.timeSplash > 0) {
                 self.dataConfigurationModel = configuration
                 self.initSplash(dataConfigurationModel: self.dataConfigurationModel)
             }
