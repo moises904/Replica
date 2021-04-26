@@ -14,8 +14,14 @@ class SplashViewController: UIViewController, IBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeView()
         registerObservers()
         callDataConfiguration()
+    }
+    
+    private func initializeView() {
+        self.view.backgroundColor = BcpColors.BlueBcpPrimary
+        hideNavigationBar()
     }
     
     private func initSplash(dataConfigurationModel: DataConfigurationModel?) {
@@ -38,7 +44,6 @@ class SplashViewController: UIViewController, IBaseViewController {
     
     private func callDataConfiguration() {
         splashViewModel.getDataConfigInitial()
-        
     }
     
     func registerObservers() {
@@ -51,9 +56,12 @@ class SplashViewController: UIViewController, IBaseViewController {
             }
             
         }
-        
 
     }
 
+    func hideNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
 }
 

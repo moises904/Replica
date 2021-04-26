@@ -7,6 +7,7 @@
 
 import UIKit
 
-protocol IBaseViewController {
+@objc protocol IBaseViewController {
+    @objc optional func hideNavigationBar()
     func registerObservers()
 }

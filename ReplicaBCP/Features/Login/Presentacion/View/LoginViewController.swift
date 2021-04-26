@@ -9,17 +9,28 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var lblTitleGreats: UILabel!
     
+    @IBOutlet var view1: UIView!
     var dataConfiguration: DataConfigurationModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initializationView()
+        loadDataConfiguration()
     }
     
+    private func initializationView() {
+        self.lblTitleGreats.configureTitleLabel()
+        self.view1.backgroundColor = BcpColors.BlueBcpPrimary
+    }
     
     public func setDataConfiguration(dataConfiguration: DataConfigurationModel) {
         self.dataConfiguration = dataConfiguration
-        print(self.dataConfiguration?.typeGreats)
+    }
+    
+    private func loadDataConfiguration() {
+        self.lblTitleGreats?.text = self.dataConfiguration?.typeGreats
+
     }
 }

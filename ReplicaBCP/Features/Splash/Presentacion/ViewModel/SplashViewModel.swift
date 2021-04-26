@@ -40,4 +40,6 @@ class SplashViewModel {
         self.getDataInitialUseCase.execute(completion:dataConfigCompletion)
         
     }
+    
+    
 }

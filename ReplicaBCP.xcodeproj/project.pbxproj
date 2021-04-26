@@ -33,6 +33,8 @@
 		B5DFA06A263529C10072C3D5 /* MappingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA069263529C10072C3D5 /* MappingResponse.swift */; };
 		B5DFA07F263559070072C3D5 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA07E263559070072C3D5 /* LiveData.swift */; };
 		B5DFA08626355D530072C3D5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA08526355D530072C3D5 /* BaseViewController.swift */; };
+		B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA096263654350072C3D5 /* BcpColors.swift */; };
+		B5DFA09D26366A020072C3D5 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		B5DFA069263529C10072C3D5 /* MappingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingResponse.swift; sourceTree = "<group>"; };
 		B5DFA07E263559070072C3D5 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
 		B5DFA08526355D530072C3D5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B5DFA096263654350072C3D5 /* BcpColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BcpColors.swift; sourceTree = "<group>"; };
+		B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,7 +420,9 @@
 		B5DFA08326355D220072C3D5 /* commons */ = {
 			isa = PBXGroup;
 			children = (
+				B5DFA09B26365BD10072C3D5 /* Colors */,
 				B5DFA08426355D2B0072C3D5 /* Bases */,
+				B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */,
 			);
 			path = commons;
 			sourceTree = "<group>";
@@ -428,6 +434,14 @@
 				B5DFA08526355D530072C3D5 /* BaseViewController.swift */,
 			);
 			path = Bases;
+			sourceTree = "<group>";
+		};
+		B5DFA09B26365BD10072C3D5 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				B5DFA096263654350072C3D5 /* BcpColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,6 +582,7 @@
 				B5DFA07F263559070072C3D5 /* LiveData.swift in Sources */,
 				B5DFA0302633A0380072C3D5 /* DataInitialResponse.swift in Sources */,
 				B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */,
+				B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */,
 				B5DFA08626355D530072C3D5 /* BaseViewController.swift in Sources */,
 				B5DFA0442633AC320072C3D5 /* GetDataInitialUseCase.swift in Sources */,
 				B5988C2526323A06003F0780 /* LoginViewController.swift in Sources */,
@@ -575,6 +590,7 @@
 				B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */,
 				B5988BA926321BE9003F0780 /* AppDelegate.swift in Sources */,
 				B5DFA05826351F730072C3D5 /* ReaderLocalJson.swift in Sources */,
+				B5DFA09D26366A020072C3D5 /* Extension+UILabel.swift in Sources */,
 				B5DFA04C2633B3910072C3D5 /* SplashViewModel.swift in Sources */,
 				B5DFA06A263529C10072C3D5 /* MappingResponse.swift in Sources */,
 				B5DFA01D26339F240072C3D5 /* Api.swift in Sources */,

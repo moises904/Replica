@@ -15,9 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="eL1-oG-Z4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yw-JU-DrT" customClass="TitleLabel">
+                                <rect key="frame" x="20" y="64" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="m0B-YX-OtZ"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="7yw-JU-DrT" firstAttribute="leading" secondItem="m0B-YX-OtZ" secondAttribute="leading" constant="20" id="Oeg-ek-9K2"/>
+                            <constraint firstItem="7yw-JU-DrT" firstAttribute="top" secondItem="m0B-YX-OtZ" secondAttribute="top" constant="20" id="USe-l4-2nR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblTitleGreats" destination="7yw-JU-DrT" id="aAl-a2-KHe"/>
+                        <outlet property="view1" destination="eL1-oG-Z4b" id="nvl-Du-oyX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBD-wz-U4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
