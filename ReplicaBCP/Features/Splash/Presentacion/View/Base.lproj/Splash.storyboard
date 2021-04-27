@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayV-q4-uAM" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="139" y="413" width="150" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9pm-lw-dE5"/>
+                                    <constraint firstAttribute="width" constant="150" id="VVb-cJ-jdZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BcpPrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="ayV-q4-uAM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NfA-uc-QOg"/>
+                            <constraint firstItem="ayV-q4-uAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fPQ-2m-eNl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0gG-KX-QMs"/>
+                    <connections>
+                        <outlet property="animationSplash" destination="ayV-q4-uAM" id="Unb-pI-Sch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,10 +61,16 @@
             <point key="canvasLocation" x="131.77570093457942" y="104.96760259179267"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ayV-q4-uAM"/>
+    </designables>
     <color key="tintColor" name="BcpPrimaryColor"/>
     <resources>
         <namedColor name="BcpPrimaryColor">
             <color red="0.0" green="0.16470588235294117" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

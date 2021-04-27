@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class SplashViewController: UIViewController, IBaseViewController {
 
+    @IBOutlet weak var animationSplash: AnimationView!
     private let splashViewModel: SplashViewModel = SplashViewModel()
     private var dataConfigurationModel : DataConfigurationModel?
     
@@ -21,8 +23,22 @@ class SplashViewController: UIViewController, IBaseViewController {
     
     private func initializeView() {
         self.view.backgroundColor = BcpColors.BlueBcpPrimary
+        loadAnimation()
         hideNavigationBar()
     }
+    
+    private func loadAnimation() {
+        animationSplash?.contentMode = .scaleAspectFill
+        let pathAnimation = Bundle.main.path(forResource: "splash_logo", ofType: "json")
+        let animation = Animation.filepath(pathAnimation ?? "")
+        animationSplash?.backgroundColor = BcpColors.BlueBcpPrimary
+        animationSplash?.animation = animation
+        animationSplash?.loopMode = .loop
+        animationSplash?.animationSpeed = 0.5
+        animationSplash?.play()
+    }
+    
+    
     
     private func initSplash(dataConfigurationModel: DataConfigurationModel?) {
         

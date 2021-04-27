@@ -26,10 +26,6 @@ func transformDataConfigResponseToDataConfigModel(dataConfigurationResponse: Dat
            timeToGread = "Buenas noches"
         }
         
-        /*
-        dataInitialModel = DataConfigurationModel(timeSplash: dataConfigurationResponse?.time ?? 0,
-                                            typeGreats: timeToGread,
-                                            enableSound: dataConfigurationResponse?.sounds ?? false)*/
         dataInitialModel = DataConfigurationModel()
         dataInitialModel.timeSplash = dataConfigurationResponse?.time ?? 0
         dataInitialModel.typeGreats = timeToGread
