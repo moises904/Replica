@@ -6,22 +6,25 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var greattingAnimationView: AnimationView!
     @IBOutlet weak var lblTitleGreats: UILabel!
     @IBOutlet var view1: UIView!
     @IBOutlet weak var optionsCollectionView: UICollectionView!
     private let namesOptions = [0: "Transferir\ndinero", 1: "Ingresar", 2: "Ubícanos",
                                       3: "Token Digital", 4 : "Bloqueo\nde tarjeta", 5: "Para ti"]
-    private let imagesOptions = [0:"ico_ubicacion.png",1:"ico_ubicacion.png",2:"ico_ubicacion.png",
-                                 3:"ico_ubicacion.png",4:"ico_ubicacion.png",5:"ico_ubicacion.png"]
+    private let imagesOptions = [0:"transfer.png",1:"ingresos.png",2:"map.png",
+                                 3:"chip.png",4:"candado.png",5:"regalo.png"]
     private var pivote = 0
     var dataConfiguration: DataConfigurationModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializationView()
+        animationStart()
         loadDataConfiguration()
     }
     
@@ -31,6 +34,17 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.optionsCollectionView.backgroundColor = BcpColors.BlueBcpPrimary
         self.optionsCollectionView.delegate = self
         self.optionsCollectionView.dataSource = self
+    }
+    
+    private func animationStart() {
+        greattingAnimationView?.contentMode = .scaleAspectFill
+        let pathAnimation = Bundle.main.path(forResource: "content", ofType: "json")
+        let animation = Animation.filepath(pathAnimation ?? "")
+        greattingAnimationView?.backgroundColor = BcpColors.BlueBcpPrimary
+        greattingAnimationView?.animation = animation
+        greattingAnimationView?.loopMode = .loop
+        greattingAnimationView?.animationSpeed = 0.5
+        greattingAnimationView?.play()
     }
     
     public func setDataConfiguration(dataConfiguration: DataConfigurationModel) {

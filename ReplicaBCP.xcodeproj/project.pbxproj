@@ -10,6 +10,12 @@
 		95E3CB15E568B3EAD9E7AD55 /* Pods_ReplicaBCP_ReplicaBCPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */; };
 		B50D5E36263BEF4200A48BF8 /* KeyboardResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */; };
 		B50D5E40263BF15300A48BF8 /* MapperKeboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50D5E3F263BF15300A48BF8 /* MapperKeboardResponse.swift */; };
+		B556EF79263CCF3800298CB2 /* transfer.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF78263CCF3800298CB2 /* transfer.png */; };
+		B556EF84263CCFB600298CB2 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF83263CCFB500298CB2 /* map.png */; };
+		B556EF89263CD05900298CB2 /* chip.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF88263CD05900298CB2 /* chip.png */; };
+		B556EF8E263CD0B100298CB2 /* candado.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF8D263CD0B100298CB2 /* candado.png */; };
+		B556EF93263CD0FE00298CB2 /* ingresos.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF92263CD0FE00298CB2 /* ingresos.png */; };
+		B556EF98263CD12B00298CB2 /* regalo.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF97263CD12B00298CB2 /* regalo.png */; };
 		B57EB74A263B8E4F0038532F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB749263B8E4F0038532F /* Util.swift */; };
 		B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57EB750263BB44D0038532F /* Keyboard.storyboard */; };
 		B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB755263BB4DC0038532F /* KeboardViewController.swift */; };
@@ -46,6 +52,8 @@
 		B5D8EFC5263C717F005D731F /* MappingLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8EFC4263C717F005D731F /* MappingLoginResponse.swift */; };
 		B5D8EFCA263C78A9005D731F /* BaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8EFC9263C78A9005D731F /* BaseErrors.swift */; };
 		B5D8EFCF263C7BE3005D731F /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8EFCE263C7BE3005D731F /* Alertable.swift */; };
+		B5D8EFDB263CC822005D731F /* background.json in Resources */ = {isa = PBXBuildFile; fileRef = B5D8EFDA263CC822005D731F /* background.json */; };
+		B5D8EFE0263CC993005D731F /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = B5D8EFDF263CC993005D731F /* content.json */; };
 		B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */; };
 		B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */; };
 		B5DFA01D26339F240072C3D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01C26339F240072C3D5 /* Api.swift */; };
@@ -95,6 +103,12 @@
 		737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP_ReplicaBCPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KeyboardResponse.json; sourceTree = "<group>"; };
 		B50D5E3F263BF15300A48BF8 /* MapperKeboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperKeboardResponse.swift; sourceTree = "<group>"; };
+		B556EF78263CCF3800298CB2 /* transfer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transfer.png; sourceTree = "<group>"; };
+		B556EF83263CCFB500298CB2 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		B556EF88263CD05900298CB2 /* chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chip.png; sourceTree = "<group>"; };
+		B556EF8D263CD0B100298CB2 /* candado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = candado.png; sourceTree = "<group>"; };
+		B556EF92263CD0FE00298CB2 /* ingresos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingresos.png; sourceTree = "<group>"; };
+		B556EF97263CD12B00298CB2 /* regalo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regalo.png; sourceTree = "<group>"; };
 		B57EB749263B8E4F0038532F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B57EB750263BB44D0038532F /* Keyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
 		B57EB755263BB4DC0038532F /* KeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeboardViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +151,8 @@
 		B5D8EFC4263C717F005D731F /* MappingLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingLoginResponse.swift; sourceTree = "<group>"; };
 		B5D8EFC9263C78A9005D731F /* BaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrors.swift; sourceTree = "<group>"; };
 		B5D8EFCE263C7BE3005D731F /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		B5D8EFDA263CC822005D731F /* background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = background.json; sourceTree = "<group>"; };
+		B5D8EFDF263CC993005D731F /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGetDataInitialRepository.swift; sourceTree = "<group>"; };
 		B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfigurationModel.swift; sourceTree = "<group>"; };
 		B5DFA01C26339F240072C3D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -736,6 +752,14 @@
 		B5DFA0C8263774190072C3D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B556EF97263CD12B00298CB2 /* regalo.png */,
+				B556EF92263CD0FE00298CB2 /* ingresos.png */,
+				B556EF8D263CD0B100298CB2 /* candado.png */,
+				B556EF88263CD05900298CB2 /* chip.png */,
+				B556EF83263CCFB500298CB2 /* map.png */,
+				B556EF78263CCF3800298CB2 /* transfer.png */,
+				B5D8EFDF263CC993005D731F /* content.json */,
+				B5D8EFDA263CC822005D731F /* background.json */,
 				B59FD2AC263C6C6A0028C33A /* LoginResponse.json */,
 				B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */,
 				B5C7A343263BE1B800D45727 /* DataInitialResponse.json */,
@@ -856,13 +880,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57EB75B263BBB460038532F /* cerrar.png in Resources */,
+				B556EF98263CD12B00298CB2 /* regalo.png in Resources */,
+				B556EF93263CD0FE00298CB2 /* ingresos.png in Resources */,
+				B556EF79263CCF3800298CB2 /* transfer.png in Resources */,
 				B5C7A345263BE1B800D45727 /* DataInitialResponse.json in Resources */,
 				B5988C1A2632392B003F0780 /* Login.storyboard in Resources */,
 				B5DFA0E52637D6090072C3D5 /* ico_ubicacion.png in Resources */,
 				B5988C2026323950003F0780 /* Home.storyboard in Resources */,
+				B5D8EFE0263CC993005D731F /* content.json in Resources */,
+				B5D8EFDB263CC822005D731F /* background.json in Resources */,
 				B50D5E36263BEF4200A48BF8 /* KeyboardResponse.json in Resources */,
 				B5DFA0AE26376BC10072C3D5 /* splash_logo.json in Resources */,
+				B556EF8E263CD0B100298CB2 /* candado.png in Resources */,
 				B5DFA0B326376BC90072C3D5 /* splash_iso.json in Resources */,
+				B556EF89263CD05900298CB2 /* chip.png in Resources */,
+				B556EF84263CCFB600298CB2 /* map.png in Resources */,
 				B5988BB526321BEB003F0780 /* LaunchScreen.storyboard in Resources */,
 				B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */,
 				B59FD2AD263C6C6A0028C33A /* LoginResponse.json in Resources */,

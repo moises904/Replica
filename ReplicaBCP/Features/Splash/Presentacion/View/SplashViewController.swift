@@ -51,6 +51,9 @@ class SplashViewController: UIViewController, IBaseViewController {
     }
 
     @objc private func goToLogin() {
+        
+        self.animationSplash?.stop()
+        
         let storyboard =  UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(identifier: "LoginStoryboardID") as? LoginViewController
         loginViewController?.setDataConfiguration(dataConfiguration: self.dataConfigurationModel!)
