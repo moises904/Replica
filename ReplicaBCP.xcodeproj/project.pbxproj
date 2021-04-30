@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95E3CB15E568B3EAD9E7AD55 /* Pods_ReplicaBCP_ReplicaBCPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */; };
+		B57EB74A263B8E4F0038532F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB749263B8E4F0038532F /* Util.swift */; };
 		B5988BA926321BE9003F0780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988BA826321BE9003F0780 /* AppDelegate.swift */; };
 		B5988BAB26321BE9003F0780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988BAA26321BE9003F0780 /* SceneDelegate.swift */; };
 		B5988BAD26321BE9003F0780 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988BAC26321BE9003F0780 /* SplashViewController.swift */; };
@@ -68,6 +69,7 @@
 		52E92804F4FC65A5E503430C /* Pods-ReplicaBCP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReplicaBCP.debug.xcconfig"; path = "Target Support Files/Pods-ReplicaBCP/Pods-ReplicaBCP.debug.xcconfig"; sourceTree = "<group>"; };
 		57A2129BA586A001D7C9F488 /* Pods_ReplicaBCP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP_ReplicaBCPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57EB749263B8E4F0038532F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B5988BA526321BE9003F0780 /* ReplicaBCP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReplicaBCP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5988BA826321BE9003F0780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5988BAA26321BE9003F0780 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			children = (
 				B5988C15263238DB003F0780 /* ViewModel */,
 				B5988C14263238D1003F0780 /* View */,
+				B57EB749263B8E4F0038532F /* Util.swift */,
 			);
 			path = Presentacion;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				B5988C2526323A06003F0780 /* LoginViewController.swift in Sources */,
 				B5988BAD26321BE9003F0780 /* SplashViewController.swift in Sources */,
 				B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */,
+				B57EB74A263B8E4F0038532F /* Util.swift in Sources */,
 				B5DFA0E02637C3DD0072C3D5 /* OptionCollectionViewCell.swift in Sources */,
 				B5988BA926321BE9003F0780 /* AppDelegate.swift in Sources */,
 				B5DFA05826351F730072C3D5 /* ReaderLocalJson.swift in Sources */,

@@ -17,7 +17,9 @@ extension UILabel {
     
     func configureTextOption() {
         self.textColor = .white
+        self.numberOfLines = 2
         self.font = .systemFont(ofSize: 15, weight:.regular)
+        self.textAlignment = .center
         self.sizeToFit()
     }
 }

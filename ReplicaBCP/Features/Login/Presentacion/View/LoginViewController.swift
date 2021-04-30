@@ -7,12 +7,16 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var lblTitleGreats: UILabel!
     @IBOutlet var view1: UIView!
     @IBOutlet weak var optionsCollectionView: UICollectionView!
-    
+    private let namesOptions = [0: "Transferir\ndinero", 1: "Ingresar", 2: "Ubícanos",
+                                      3: "Token Digital", 4 : "Bloqueo\nde tarjeta", 5: "Para ti"]
+    private let imagesOptions = [0:"ico_ubicacion.png",1:"ico_ubicacion.png",2:"ico_ubicacion.png",
+                                 3:"ico_ubicacion.png",4:"ico_ubicacion.png",5:"ico_ubicacion.png"]
+    private var pivote = 0
     var dataConfiguration: DataConfigurationModel? = nil
     
     override func viewDidLoad() {
@@ -47,13 +51,29 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOption", for: indexPath) as!OptionCollectionViewCell
-        cell.descriptionLabel.text = "hola esta es una opcion"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOption", for: indexPath as IndexPath) as!OptionCollectionViewCell
+        if (pivote < indexPath.section) {
+            pivote = (indexPath.section + 1)
+        }
+        
+        cell.descriptionLabel.text = self.namesOptions[pivote + indexPath.section + indexPath.row]
         cell.descriptionLabel.configureTextOption()
-        cell.iconImageView.frame.size.height = 100
-        cell.iconImageView.frame.size.width = 100
+        cell.iconImageView.frame.size.height = 70
+        cell.iconImageView.frame.size.width =  90
         cell.iconImageView.contentMode = .scaleAspectFit
-        cell.iconImageView.image = UIImage(named: "ico_ubicacion.png")
+        cell.iconImageView.image = UIImage(named: self.imagesOptions[pivote + indexPath.section + indexPath.row]!)
+        cell.iconImageView.tintColor = .white
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if( indexPath.section == 0 && indexPath.row == 1) {
+            goToKeyboard()
+        }
+        return true
+    }
+    
+    private func goToKeyboard() {
+        print("Teclado")
     }
 }
