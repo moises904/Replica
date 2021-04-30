@@ -14,8 +14,8 @@ func transformKeyboard(keyboardResponse: KeyboardResponse) -> KeyboardModel {
 
     var pivote:Int = 0
     
-    for  row in 0..<4 {
-        for  col in 0..<3 {
+    for  _ in 0..<4 {
+        for  _ in 0..<3 {
             
             if(pivote < 9 ) {
                 keyboardModel.table.append(keyboardResponse.keyboard[pivote])

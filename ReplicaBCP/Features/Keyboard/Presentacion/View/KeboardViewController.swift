@@ -13,10 +13,13 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
     
     @IBOutlet weak var keyboardCollectionView: UICollectionView!
     @IBOutlet weak var closeImageView: UIImageView!
+    @IBOutlet weak var labelPasswordLabel: UILabel!
     
     private let keyboardViewModel: KeyboardViewModel = KeyboardViewModel()
     private var keyboardModel: KeyboardModel = KeyboardModel()
     private var pivote:Int = 0
+    private let DIGITS_PASSWROD = 6
+    private var positionsForPassword: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,26 +58,44 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellKeyboard",
                                                       for: indexPath as IndexPath) as!KeyboatdCollectionViewCell
         cell.numberButton.configureStyleButton()
-        
-        if (pivote < indexPath.section) {
-            pivote = pivote + (indexPath.section + 1)
-        }
-        
-        let digit = String(self.keyboardModel.table[pivote + indexPath.section + indexPath.row])
+        cell.numberButton.addTarget(self, action: #selector(setDigitPassword(_:)), for: .touchUpInside)
+        // send position to server
+        cell.numberButton.tag = pivote
+
+        let digit = String(self.keyboardModel.table[pivote])
+        pivote = pivote + 1
+        cell.numberButton.setTitle(digit,
+                                   for: UIControl.State.normal)
             if(digit != "-1") {
                 cell.numberButton.setTitle(digit,
                                            for: UIControl.State.normal)
             } else {
-            cell.numberButton.isHidden = true
+                cell.numberButton.isHidden = true
             }
         
         return cell
     }
     
+    @objc func setDigitPassword(_ sender : UIButton) {
+        
+        if (self.labelPasswordLabel.text!.count < DIGITS_PASSWROD) {
+            self.labelPasswordLabel!.text! = self.labelPasswordLabel!.text! + "*"
+            self.positionsForPassword = self.positionsForPassword + String(sender.tag)
+            print(sender.tag)
+        }
+        
+        if(self.labelPasswordLabel.text!.count == DIGITS_PASSWROD) {
+            self.keyboardViewModel.getLoginUser(positionsPassword: self.positionsForPassword)
+        }
+        
+    }
+    
     func registerObservers() {
+        
         self.keyboardViewModel.keyboardModelLiveData?.observe {
             result in
             self.keyboardModel = result
         }
+        
     }
 }

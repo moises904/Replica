@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="width" constant="20" id="csg-DW-mEP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="******" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6Y-pf-Koq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6Y-pf-Koq">
                                 <rect key="frame" x="167" y="232" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="9bZ-Kh-Ffd"/>
@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="closeImageView" destination="3Za-G0-xVP" id="jUQ-DW-ibK"/>
                         <outlet property="keyboardCollectionView" destination="8FQ-2S-9dZ" id="Oya-FG-mp7"/>
+                        <outlet property="labelPasswordLabel" destination="V6Y-pf-Koq" id="NRs-Tu-BEZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59h-2A-Il4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
