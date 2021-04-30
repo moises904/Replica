@@ -21,6 +21,7 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
     private let DIGITS_PASSWROD = 6
     private var positionsForPassword: String = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeView()
@@ -104,6 +105,10 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
         
         self.keyboardViewModel.successLoginLiveData.observe {
             resultSuccessLogin in
+            let welcomeUser = "Bienvenido " + resultSuccessLogin.userName + " , " + resultSuccessLogin.lastName
+            self.showAlert(message: welcomeUser)
+            //self.dismiss(animated: true, completion:nil)
+
         }
     }
 }

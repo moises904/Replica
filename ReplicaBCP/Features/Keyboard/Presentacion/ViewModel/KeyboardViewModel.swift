@@ -34,7 +34,6 @@ class KeyboardViewModel {
         
         switch result {
         case .success(let keyboardModel):
-            print("success keyboard on view model")
             self.keyboardModelLiveData?.value = keyboardModel!
             break
         default:

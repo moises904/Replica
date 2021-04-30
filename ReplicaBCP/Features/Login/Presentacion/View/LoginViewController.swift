@@ -80,4 +80,11 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.navigationController?.present(keyboardViewController!, animated: true, completion: nil)
         
     }
+    
+    private func goToHome() {
+        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+        let homeViewController = storyboard.instantiateViewController(identifier:"HomeStoryboardID") as? KeyboardViewController
+        self.navigationController?.pushViewController(homeViewController!, animated: true)
+        
+    }
 }
