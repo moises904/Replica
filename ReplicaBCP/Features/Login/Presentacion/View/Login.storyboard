@@ -24,10 +24,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-cU-gsn">
-                                <rect key="frame" x="10" y="566" width="414" height="320"/>
+                                <rect key="frame" x="10" y="566" width="374" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="394" id="CcF-qj-wjy"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="394" id="CcF-qj-wjy"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="FWN-1i-YI2"/>
                                     <constraint firstAttribute="height" constant="320" id="un1-Eh-aGT"/>
                                 </constraints>
@@ -51,13 +51,11 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico_ubicacion.png" translatesAutoresizingMaskIntoConstraints="NO" id="BlY-xQ-PoY">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iR4-V6-7uV">
                                                     <rect key="frame" x="9" y="100" width="79" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -77,12 +75,10 @@
                         <viewLayoutGuide key="safeArea" id="m0B-YX-OtZ"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                         <constraints>
-                            <constraint firstAttribute="left" secondItem="zHs-cU-gsn" secondAttribute="leftMargin" constant="10" id="6vF-i7-CWl"/>
                             <constraint firstItem="m0B-YX-OtZ" firstAttribute="bottom" secondItem="zHs-cU-gsn" secondAttribute="bottom" constant="-24" id="9Ck-bs-Tzp"/>
-                            <constraint firstItem="zHs-cU-gsn" firstAttribute="trailing" secondItem="m0B-YX-OtZ" secondAttribute="trailing" constant="10" id="D07-3u-q52"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zHs-cU-gsn" secondAttribute="trailing" constant="10" id="MgX-Pc-Yew"/>
                             <constraint firstItem="7yw-JU-DrT" firstAttribute="leading" secondItem="m0B-YX-OtZ" secondAttribute="leading" constant="20" id="Oeg-ek-9K2"/>
                             <constraint firstItem="7yw-JU-DrT" firstAttribute="top" secondItem="m0B-YX-OtZ" secondAttribute="top" constant="20" id="USe-l4-2nR"/>
-                            <constraint firstAttribute="trailing" secondItem="zHs-cU-gsn" secondAttribute="trailing" constant="10" id="ltQ-es-uqt"/>
                             <constraint firstItem="zHs-cU-gsn" firstAttribute="leading" secondItem="eL1-oG-Z4b" secondAttribute="leading" constant="10" id="sWL-VA-kgL"/>
                         </constraints>
                     </view>
@@ -104,12 +100,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

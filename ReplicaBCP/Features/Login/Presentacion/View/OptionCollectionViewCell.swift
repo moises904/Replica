@@ -12,5 +12,4 @@ class OptionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
 }

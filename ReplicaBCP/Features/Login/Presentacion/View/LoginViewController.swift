@@ -24,7 +24,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     private func initializationView() {
         self.lblTitleGreats.configureTitleLabel()
         self.view1.backgroundColor = BcpColors.BlueBcpPrimary
-        self.optionsCollectionView.backgroundColor = .white
+        self.optionsCollectionView.backgroundColor = BcpColors.BlueBcpPrimary
         self.optionsCollectionView.delegate = self
         self.optionsCollectionView.dataSource = self
     }
@@ -48,7 +48,8 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOption", for: indexPath) as!OptionCollectionViewCell
-        cell.descriptionLabel.text = "hola"
+        cell.descriptionLabel.text = "hola esta es una opcion"
+        cell.descriptionLabel.configureTextOption()
         cell.iconImageView.frame.size.height = 100
         cell.iconImageView.frame.size.width = 100
         cell.iconImageView.contentMode = .scaleAspectFit

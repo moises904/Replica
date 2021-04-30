@@ -13,5 +13,11 @@ extension UILabel {
         self.textColor = .white
         self.font = .systemFont(ofSize: 20, weight:.bold)
         self.sizeToFit()
+     }
+    
+    func configureTextOption() {
+        self.textColor = .white
+        self.font = .systemFont(ofSize: 15, weight:.regular)
+        self.sizeToFit()
     }
 }
