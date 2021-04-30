@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		95E3CB15E568B3EAD9E7AD55 /* Pods_ReplicaBCP_ReplicaBCPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */; };
+		B50D5E36263BEF4200A48BF8 /* KeyboardResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */; };
+		B50D5E40263BF15300A48BF8 /* MapperKeboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50D5E3F263BF15300A48BF8 /* MapperKeboardResponse.swift */; };
 		B57EB74A263B8E4F0038532F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB749263B8E4F0038532F /* Util.swift */; };
 		B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57EB750263BB44D0038532F /* Keyboard.storyboard */; };
 		B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB755263BB4DC0038532F /* KeboardViewController.swift */; };
@@ -26,12 +28,19 @@
 		B5988C2A26323A28003F0780 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988C2926323A28003F0780 /* HomeViewController.swift */; };
 		B5C7A308263BC27500D45727 /* KeyboatdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */; };
 		B5C7A30D263BC96B00D45727 /* Extension+UIBotton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */; };
+		B5C7A312263BDAB800D45727 /* IGetKeyboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A311263BDAB800D45727 /* IGetKeyboardRepository.swift */; };
+		B5C7A317263BDB2800D45727 /* KeyboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A316263BDB2800D45727 /* KeyboardModel.swift */; };
+		B5C7A31C263BDDCB00D45727 /* GetKeyboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A31B263BDDCB00D45727 /* GetKeyboardUseCase.swift */; };
+		B5C7A333263BE08B00D45727 /* KeyboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A332263BE08B00D45727 /* KeyboardRepository.swift */; };
+		B5C7A33B263BE0A200D45727 /* KeyboardProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A33A263BE0A200D45727 /* KeyboardProxy.swift */; };
+		B5C7A345263BE1B800D45727 /* DataInitialResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7A343263BE1B800D45727 /* DataInitialResponse.json */; };
+		B5C7A34F263BE36600D45727 /* KeyboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A34E263BE36600D45727 /* KeyboardResponse.swift */; };
+		B5C7A35F263BE61B00D45727 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A35E263BE61B00D45727 /* KeyboardViewModel.swift */; };
 		B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */; };
 		B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */; };
 		B5DFA01D26339F240072C3D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01C26339F240072C3D5 /* Api.swift */; };
 		B5DFA02326339F6F0072C3D5 /* DataInitialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA02226339F6F0072C3D5 /* DataInitialRepository.swift */; };
 		B5DFA0302633A0380072C3D5 /* DataInitialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA02F2633A0380072C3D5 /* DataInitialResponse.swift */; };
-		B5DFA0392633A2F70072C3D5 /* DataInitial.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DFA0382633A2F70072C3D5 /* DataInitial.json */; };
 		B5DFA03E2633AA750072C3D5 /* DataInitialProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA03D2633AA750072C3D5 /* DataInitialProxy.swift */; };
 		B5DFA0442633AC320072C3D5 /* GetDataInitialUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA0432633AC320072C3D5 /* GetDataInitialUseCase.swift */; };
 		B5DFA04C2633B3910072C3D5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA04B2633B3910072C3D5 /* SplashViewModel.swift */; };
@@ -74,6 +83,8 @@
 		52E92804F4FC65A5E503430C /* Pods-ReplicaBCP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReplicaBCP.debug.xcconfig"; path = "Target Support Files/Pods-ReplicaBCP/Pods-ReplicaBCP.debug.xcconfig"; sourceTree = "<group>"; };
 		57A2129BA586A001D7C9F488 /* Pods_ReplicaBCP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP_ReplicaBCPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KeyboardResponse.json; sourceTree = "<group>"; };
+		B50D5E3F263BF15300A48BF8 /* MapperKeboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperKeboardResponse.swift; sourceTree = "<group>"; };
 		B57EB749263B8E4F0038532F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B57EB750263BB44D0038532F /* Keyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
 		B57EB755263BB4DC0038532F /* KeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeboardViewController.swift; sourceTree = "<group>"; };
@@ -98,12 +109,19 @@
 		B5988C2926323A28003F0780 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboatdCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIBotton.swift"; sourceTree = "<group>"; };
+		B5C7A311263BDAB800D45727 /* IGetKeyboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGetKeyboardRepository.swift; sourceTree = "<group>"; };
+		B5C7A316263BDB2800D45727 /* KeyboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModel.swift; sourceTree = "<group>"; };
+		B5C7A31B263BDDCB00D45727 /* GetKeyboardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetKeyboardUseCase.swift; sourceTree = "<group>"; };
+		B5C7A332263BE08B00D45727 /* KeyboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRepository.swift; sourceTree = "<group>"; };
+		B5C7A33A263BE0A200D45727 /* KeyboardProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardProxy.swift; sourceTree = "<group>"; };
+		B5C7A343263BE1B800D45727 /* DataInitialResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataInitialResponse.json; sourceTree = "<group>"; };
+		B5C7A34E263BE36600D45727 /* KeyboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponse.swift; sourceTree = "<group>"; };
+		B5C7A35E263BE61B00D45727 /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
 		B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGetDataInitialRepository.swift; sourceTree = "<group>"; };
 		B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfigurationModel.swift; sourceTree = "<group>"; };
 		B5DFA01C26339F240072C3D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B5DFA02226339F6F0072C3D5 /* DataInitialRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInitialRepository.swift; sourceTree = "<group>"; };
 		B5DFA02F2633A0380072C3D5 /* DataInitialResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInitialResponse.swift; sourceTree = "<group>"; };
-		B5DFA0382633A2F70072C3D5 /* DataInitial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataInitial.json; sourceTree = "<group>"; };
 		B5DFA03D2633AA750072C3D5 /* DataInitialProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInitialProxy.swift; sourceTree = "<group>"; };
 		B5DFA0432633AC320072C3D5 /* GetDataInitialUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataInitialUseCase.swift; sourceTree = "<group>"; };
 		B5DFA04B2633B3910072C3D5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -174,10 +192,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B50D5E3A263BF08F00A48BF8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B5DFA05326351E4B0072C3D5 /* Local */,
+				B5DFA05426351E5E0072C3D5 /* Remote */,
+				B5DFA02E26339FFD0072C3D5 /* Response */,
+				B5DFA02D26339FF50072C3D5 /* Request */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		B50D5E3B263BF0C700A48BF8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B5DFA03D2633AA750072C3D5 /* DataInitialProxy.swift */,
+				B5DFA02226339F6F0072C3D5 /* DataInitialRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B50D5E3C263BF0F700A48BF8 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				B5DFA069263529C10072C3D5 /* MappingResponse.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		B50D5E3D263BF10E00A48BF8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A34D263BE35500D45727 /* Response */,
+				B5C7A331263BE06900D45727 /* Remote */,
+				B5C7A330263BE06100D45727 /* Local */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		B50D5E3E263BF13A00A48BF8 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				B50D5E3F263BF15300A48BF8 /* MapperKeboardResponse.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		B57EB74E263BB4280038532F /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				B57EB74F263BB4360038532F /* View */,
+				B5C7A32A263BDFBE00D45727 /* Data */,
+				B5C7A328263BDFAB00D45727 /* Domain */,
+				B5C7A326263BDF8F00D45727 /* Presentacion */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -217,7 +283,7 @@
 		B5988BA726321BE9003F0780 /* ReplicaBCP */ = {
 			isa = PBXGroup;
 			children = (
-				B5DFA08326355D220072C3D5 /* commons */,
+				B5DFA08326355D220072C3D5 /* Commons */,
 				B5988BF0263234C1003F0780 /* Features */,
 				B5988BE6263233DA003F0780 /* Supporting */,
 				B5988BDF263233A2003F0780 /* Application */,
@@ -248,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				B5DFA0C8263774190072C3D5 /* Assets */,
-				B5DFA0382633A2F70072C3D5 /* DataInitial.json */,
 				B5988BB326321BEB003F0780 /* LaunchScreen.storyboard */,
 				B5988BB126321BEB003F0780 /* Assets.xcassets */,
 			);
@@ -357,6 +422,9 @@
 		B5988BFD263235E2003F0780 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B5C7A325263BDF4700D45727 /* Remote */,
+				B5C7A324263BDF3E00D45727 /* Local */,
+				B5C7A323263BDF3500D45727 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -396,6 +464,128 @@
 			path = Presentacion;
 			sourceTree = "<group>";
 		};
+		B5C7A320263BDF0E00D45727 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A31B263BDDCB00D45727 /* GetKeyboardUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B5C7A322263BDF2500D45727 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A311263BDAB800D45727 /* IGetKeyboardRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B5C7A323263BDF3500D45727 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B5C7A324263BDF3E00D45727 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		B5C7A325263BDF4700D45727 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B5C7A326263BDF8F00D45727 /* Presentacion */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A35D263BE60800D45727 /* ViewModel */,
+				B57EB74F263BB4360038532F /* View */,
+			);
+			path = Presentacion;
+			sourceTree = "<group>";
+		};
+		B5C7A328263BDFAB00D45727 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A32B263BE02400D45727 /* Model */,
+				B5C7A320263BDF0E00D45727 /* UseCase */,
+				B5C7A322263BDF2500D45727 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B5C7A32A263BDFBE00D45727 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B50D5E3D263BF10E00A48BF8 /* DataSource */,
+				B5C7A32F263BE05800D45727 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B5C7A32B263BE02400D45727 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A316263BDB2800D45727 /* KeyboardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5C7A32F263BE05800D45727 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A332263BE08B00D45727 /* KeyboardRepository.swift */,
+				B5C7A33A263BE0A200D45727 /* KeyboardProxy.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B5C7A330263BE06100D45727 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B50D5E3E263BF13A00A48BF8 /* Mapper */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		B5C7A331263BE06900D45727 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B5C7A342263BE0DC00D45727 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */,
+				B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B5C7A34D263BE35500D45727 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A34E263BE36600D45727 /* KeyboardResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B5C7A35D263BE60800D45727 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5C7A35E263BE61B00D45727 /* KeyboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B5DFA00A26339AE60072C3D5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,12 +599,8 @@
 		B5DFA00B26339AF00072C3D5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B5DFA02D26339FF50072C3D5 /* Request */,
-				B5DFA02E26339FFD0072C3D5 /* Response */,
-				B5DFA05426351E5E0072C3D5 /* Remote */,
-				B5DFA05326351E4B0072C3D5 /* Local */,
-				B5DFA02226339F6F0072C3D5 /* DataInitialRepository.swift */,
-				B5DFA03D2633AA750072C3D5 /* DataInitialProxy.swift */,
+				B50D5E3B263BF0C700A48BF8 /* Repository */,
+				B50D5E3A263BF08F00A48BF8 /* DataSource */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -461,6 +647,7 @@
 		B5DFA05326351E4B0072C3D5 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				B50D5E3C263BF0F700A48BF8 /* Mapper */,
 				B5DFA05526351F420072C3D5 /* Util */,
 			);
 			path = Local;
@@ -478,7 +665,6 @@
 			isa = PBXGroup;
 			children = (
 				B5DFA05726351F730072C3D5 /* ReaderLocalJson.swift */,
-				B5DFA069263529C10072C3D5 /* MappingResponse.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -491,15 +677,14 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		B5DFA08326355D220072C3D5 /* commons */ = {
+		B5DFA08326355D220072C3D5 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				B5C7A342263BE0DC00D45727 /* UI */,
 				B5DFA09B26365BD10072C3D5 /* Colors */,
 				B5DFA08426355D2B0072C3D5 /* Bases */,
-				B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */,
-				B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */,
 			);
-			path = commons;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		B5DFA08426355D2B0072C3D5 /* Bases */ = {
@@ -522,6 +707,8 @@
 		B5DFA0C8263774190072C3D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */,
+				B5C7A343263BE1B800D45727 /* DataInitialResponse.json */,
 				B57EB75A263BBB460038532F /* cerrar.png */,
 				B5DFA0E42637D6090072C3D5 /* ico_ubicacion.png */,
 				B5DFA0AD26376BC10072C3D5 /* splash_logo.json */,
@@ -639,10 +826,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57EB75B263BBB460038532F /* cerrar.png in Resources */,
-				B5DFA0392633A2F70072C3D5 /* DataInitial.json in Resources */,
+				B5C7A345263BE1B800D45727 /* DataInitialResponse.json in Resources */,
 				B5988C1A2632392B003F0780 /* Login.storyboard in Resources */,
 				B5DFA0E52637D6090072C3D5 /* ico_ubicacion.png in Resources */,
 				B5988C2026323950003F0780 /* Home.storyboard in Resources */,
+				B50D5E36263BEF4200A48BF8 /* KeyboardResponse.json in Resources */,
 				B5DFA0AE26376BC10072C3D5 /* splash_logo.json in Resources */,
 				B5DFA0B326376BC90072C3D5 /* splash_iso.json in Resources */,
 				B5988BB526321BEB003F0780 /* LaunchScreen.storyboard in Resources */,
@@ -784,11 +972,14 @@
 				B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */,
 				B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */,
 				B5DFA08626355D530072C3D5 /* BaseViewController.swift in Sources */,
+				B5C7A317263BDB2800D45727 /* KeyboardModel.swift in Sources */,
 				B5DFA0442633AC320072C3D5 /* GetDataInitialUseCase.swift in Sources */,
 				B5988C2526323A06003F0780 /* LoginViewController.swift in Sources */,
 				B5988BAD26321BE9003F0780 /* SplashViewController.swift in Sources */,
 				B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */,
+				B5C7A34F263BE36600D45727 /* KeyboardResponse.swift in Sources */,
 				B57EB74A263B8E4F0038532F /* Util.swift in Sources */,
+				B5C7A35F263BE61B00D45727 /* KeyboardViewModel.swift in Sources */,
 				B5DFA0E02637C3DD0072C3D5 /* OptionCollectionViewCell.swift in Sources */,
 				B5988BA926321BE9003F0780 /* AppDelegate.swift in Sources */,
 				B5DFA05826351F730072C3D5 /* ReaderLocalJson.swift in Sources */,
@@ -796,9 +987,14 @@
 				B5DFA04C2633B3910072C3D5 /* SplashViewModel.swift in Sources */,
 				B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */,
 				B5C7A308263BC27500D45727 /* KeyboatdCollectionViewCell.swift in Sources */,
+				B5C7A333263BE08B00D45727 /* KeyboardRepository.swift in Sources */,
 				B5DFA06A263529C10072C3D5 /* MappingResponse.swift in Sources */,
+				B5C7A312263BDAB800D45727 /* IGetKeyboardRepository.swift in Sources */,
 				B5DFA01D26339F240072C3D5 /* Api.swift in Sources */,
+				B5C7A33B263BE0A200D45727 /* KeyboardProxy.swift in Sources */,
 				B5DFA03E2633AA750072C3D5 /* DataInitialProxy.swift in Sources */,
+				B50D5E40263BF15300A48BF8 /* MapperKeboardResponse.swift in Sources */,
+				B5C7A31C263BDDCB00D45727 /* GetKeyboardUseCase.swift in Sources */,
 				B5DFA02326339F6F0072C3D5 /* DataInitialRepository.swift in Sources */,
 				B5988BAB26321BE9003F0780 /* SceneDelegate.swift in Sources */,
 			);

@@ -17,7 +17,7 @@ class ReaderLocalJson {
                return try Data(contentsOf: url )
                 
             } catch {
-                //print("No se pudo cargar el mock -> \(error)")
+                print("No se pudo cargar el mock -> \(error)")
                 throw error
             }
                     

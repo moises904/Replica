@@ -7,17 +7,29 @@
 
 import UIKit
 
-class KeyboardViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class KeyboardViewController : UIViewController, UICollectionViewDelegate,
+                               UICollectionViewDataSource, IBaseViewController {
 
     
     @IBOutlet weak var keyboardCollectionView: UICollectionView!
     @IBOutlet weak var closeImageView: UIImageView!
     
+    private let keyboardViewModel: KeyboardViewModel = KeyboardViewModel()
+    private var keyboardModel: KeyboardModel = KeyboardModel()
+    private var pivote:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeView()
+        registerObservers()
+        callGetKeyboard()
     }
 
+    private func callGetKeyboard() {
+        self.keyboardViewModel.getDigitsKeyboard()
+    }
+    
+    
     private func initializeView() {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
@@ -43,10 +55,26 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellKeyboard",
                                                       for: indexPath as IndexPath) as!KeyboatdCollectionViewCell
         cell.numberButton.configureStyleButton()
-        cell.numberButton.setTitle("9", for: UIControl.State.normal)
         
+        if (pivote < indexPath.section) {
+            pivote = pivote + (indexPath.section + 1)
+        }
+        
+        let digit = String(self.keyboardModel.table[pivote + indexPath.section + indexPath.row])
+            if(digit != "-1") {
+                cell.numberButton.setTitle(digit,
+                                           for: UIControl.State.normal)
+            } else {
+            cell.numberButton.isHidden = true
+            }
         
         return cell
     }
     
+    func registerObservers() {
+        self.keyboardViewModel.keyboardModelLiveData?.observe {
+            result in
+            self.keyboardModel = result
+        }
+    }
 }

@@ -20,7 +20,8 @@ class DataInitialProxy : IGetDataInitialRepository {
         self.dataInitialRespository = DataInitialRepository()
     }
     
-    func getDataInitial(modeOperation: ModeOperation, completion: @escaping(_ response:Result<DataConfigurationModel?, Error>) -> Void) {
+    func getDataInitial(modeOperation: ModeOperation,
+                        completion: @escaping(_ response:Result<DataConfigurationModel?, Error>) -> Void) {
         
         if(modeOperation == .realServices) {
             getDataInitialOnRealService()
@@ -43,7 +44,7 @@ class DataInitialProxy : IGetDataInitialRepository {
     
     private func getDataInitialOnMockService() throws -> DataConfigurationModel?{
         print("Ejecuntando llamada a servicio mock")
-        let dataResponse = try ReaderLocalJson.readerLocalData(nameFile:"DataInitial")
+        let dataResponse = try ReaderLocalJson.readerLocalData(nameFile:"DataInitialResponse")
         
         let jsonDataInitial = try JSONDecoder().decode(DataInitialResponse.self, from: dataResponse!)
         
