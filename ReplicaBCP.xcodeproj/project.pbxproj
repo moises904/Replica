@@ -26,6 +26,13 @@
 		B5988C2026323950003F0780 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5988C1F26323950003F0780 /* Home.storyboard */; };
 		B5988C2526323A06003F0780 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988C2426323A06003F0780 /* LoginViewController.swift */; };
 		B5988C2A26323A28003F0780 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988C2926323A28003F0780 /* HomeViewController.swift */; };
+		B59FD294263C69EF0028C33A /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD293263C69EF0028C33A /* LoginUseCase.swift */; };
+		B59FD299263C6A2C0028C33A /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD298263C6A2C0028C33A /* LoginModel.swift */; };
+		B59FD29E263C6B0D0028C33A /* LoginProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD29D263C6B0D0028C33A /* LoginProxy.swift */; };
+		B59FD2A3263C6B1D0028C33A /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD2A2263C6B1D0028C33A /* LoginRepository.swift */; };
+		B59FD2A8263C6B360028C33A /* ILoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD2A7263C6B360028C33A /* ILoginRepository.swift */; };
+		B59FD2AD263C6C6A0028C33A /* LoginResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B59FD2AC263C6C6A0028C33A /* LoginResponse.json */; };
+		B59FD2B2263C6D0B0028C33A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FD2B1263C6D0B0028C33A /* LoginResponse.swift */; };
 		B5C7A308263BC27500D45727 /* KeyboatdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */; };
 		B5C7A30D263BC96B00D45727 /* Extension+UIBotton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */; };
 		B5C7A312263BDAB800D45727 /* IGetKeyboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A311263BDAB800D45727 /* IGetKeyboardRepository.swift */; };
@@ -107,6 +114,13 @@
 		B5988C1F26323950003F0780 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B5988C2426323A06003F0780 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B5988C2926323A28003F0780 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B59FD293263C69EF0028C33A /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		B59FD298263C6A2C0028C33A /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B59FD29D263C6B0D0028C33A /* LoginProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProxy.swift; sourceTree = "<group>"; };
+		B59FD2A2263C6B1D0028C33A /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		B59FD2A7263C6B360028C33A /* ILoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginRepository.swift; sourceTree = "<group>"; };
+		B59FD2AC263C6C6A0028C33A /* LoginResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginResponse.json; sourceTree = "<group>"; };
+		B59FD2B1263C6D0B0028C33A /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboatdCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIBotton.swift"; sourceTree = "<group>"; };
 		B5C7A311263BDAB800D45727 /* IGetKeyboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGetKeyboardRepository.swift; sourceTree = "<group>"; };
@@ -468,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C7A31B263BDDCB00D45727 /* GetKeyboardUseCase.swift */,
+				B59FD293263C69EF0028C33A /* LoginUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -476,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C7A311263BDAB800D45727 /* IGetKeyboardRepository.swift */,
+				B59FD2A7263C6B360028C33A /* ILoginRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -533,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C7A316263BDB2800D45727 /* KeyboardModel.swift */,
+				B59FD298263C6A2C0028C33A /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -542,6 +559,8 @@
 			children = (
 				B5C7A332263BE08B00D45727 /* KeyboardRepository.swift */,
 				B5C7A33A263BE0A200D45727 /* KeyboardProxy.swift */,
+				B59FD29D263C6B0D0028C33A /* LoginProxy.swift */,
+				B59FD2A2263C6B1D0028C33A /* LoginRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -573,6 +592,7 @@
 		B5C7A34D263BE35500D45727 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				B59FD2B1263C6D0B0028C33A /* LoginResponse.swift */,
 				B5C7A34E263BE36600D45727 /* KeyboardResponse.swift */,
 			);
 			path = Response;
@@ -707,6 +727,7 @@
 		B5DFA0C8263774190072C3D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B59FD2AC263C6C6A0028C33A /* LoginResponse.json */,
 				B50D5E35263BEF4200A48BF8 /* KeyboardResponse.json */,
 				B5C7A343263BE1B800D45727 /* DataInitialResponse.json */,
 				B57EB75A263BBB460038532F /* cerrar.png */,
@@ -835,6 +856,7 @@
 				B5DFA0B326376BC90072C3D5 /* splash_iso.json in Resources */,
 				B5988BB526321BEB003F0780 /* LaunchScreen.storyboard in Resources */,
 				B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */,
+				B59FD2AD263C6C6A0028C33A /* LoginResponse.json in Resources */,
 				B5988BB226321BEB003F0780 /* Assets.xcassets in Resources */,
 				B5988BB026321BE9003F0780 /* Splash.storyboard in Resources */,
 			);
@@ -967,11 +989,13 @@
 				B5DFA05E263520290072C3D5 /* BaseResponse.swift in Sources */,
 				B5988C2A26323A28003F0780 /* HomeViewController.swift in Sources */,
 				B5DFA07F263559070072C3D5 /* LiveData.swift in Sources */,
+				B59FD2A3263C6B1D0028C33A /* LoginRepository.swift in Sources */,
 				B5C7A30D263BC96B00D45727 /* Extension+UIBotton.swift in Sources */,
 				B5DFA0302633A0380072C3D5 /* DataInitialResponse.swift in Sources */,
 				B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */,
 				B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */,
 				B5DFA08626355D530072C3D5 /* BaseViewController.swift in Sources */,
+				B59FD2A8263C6B360028C33A /* ILoginRepository.swift in Sources */,
 				B5C7A317263BDB2800D45727 /* KeyboardModel.swift in Sources */,
 				B5DFA0442633AC320072C3D5 /* GetDataInitialUseCase.swift in Sources */,
 				B5988C2526323A06003F0780 /* LoginViewController.swift in Sources */,
@@ -979,11 +1003,14 @@
 				B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */,
 				B5C7A34F263BE36600D45727 /* KeyboardResponse.swift in Sources */,
 				B57EB74A263B8E4F0038532F /* Util.swift in Sources */,
+				B59FD299263C6A2C0028C33A /* LoginModel.swift in Sources */,
 				B5C7A35F263BE61B00D45727 /* KeyboardViewModel.swift in Sources */,
 				B5DFA0E02637C3DD0072C3D5 /* OptionCollectionViewCell.swift in Sources */,
 				B5988BA926321BE9003F0780 /* AppDelegate.swift in Sources */,
 				B5DFA05826351F730072C3D5 /* ReaderLocalJson.swift in Sources */,
+				B59FD294263C69EF0028C33A /* LoginUseCase.swift in Sources */,
 				B5DFA09D26366A020072C3D5 /* Extension+UILabel.swift in Sources */,
+				B59FD29E263C6B0D0028C33A /* LoginProxy.swift in Sources */,
 				B5DFA04C2633B3910072C3D5 /* SplashViewModel.swift in Sources */,
 				B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */,
 				B5C7A308263BC27500D45727 /* KeyboatdCollectionViewCell.swift in Sources */,
@@ -991,6 +1018,7 @@
 				B5DFA06A263529C10072C3D5 /* MappingResponse.swift in Sources */,
 				B5C7A312263BDAB800D45727 /* IGetKeyboardRepository.swift in Sources */,
 				B5DFA01D26339F240072C3D5 /* Api.swift in Sources */,
+				B59FD2B2263C6D0B0028C33A /* LoginResponse.swift in Sources */,
 				B5C7A33B263BE0A200D45727 /* KeyboardProxy.swift in Sources */,
 				B5DFA03E2633AA750072C3D5 /* DataInitialProxy.swift in Sources */,
 				B50D5E40263BF15300A48BF8 /* MapperKeboardResponse.swift in Sources */,
