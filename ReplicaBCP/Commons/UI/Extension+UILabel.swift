@@ -15,6 +15,13 @@ extension UILabel {
         self.sizeToFit()
      }
     
+    
+    func configurePasswordLabel() {
+        self.textColor = BcpColors.BlueBcpPrimary
+        self.font = .systemFont(ofSize: 18, weight:.bold)
+        self.sizeToFit()
+    }
+    
     func configureTextOption() {
         self.textColor = .white
         self.numberOfLines = 2
