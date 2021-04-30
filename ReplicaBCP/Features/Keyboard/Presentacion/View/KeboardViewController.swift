@@ -8,7 +8,7 @@
 import UIKit
 
 class KeyboardViewController : UIViewController, UICollectionViewDelegate,
-                               UICollectionViewDataSource, IBaseViewController {
+                               UICollectionViewDataSource, IBaseViewController, Alertable {
 
     
     @IBOutlet weak var keyboardCollectionView: UICollectionView!
@@ -93,9 +93,17 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
     func registerObservers() {
         
         self.keyboardViewModel.keyboardModelLiveData?.observe {
-            result in
-            self.keyboardModel = result
+            resultKeyboard in
+            self.keyboardModel = resultKeyboard
         }
         
+        self.keyboardViewModel.errorLoginLiveData.observe {
+            resultErrorLogin in
+            self.showAlert(message: resultErrorLogin)
+        }
+        
+        self.keyboardViewModel.successLoginLiveData.observe {
+            resultSuccessLogin in
+        }
     }
 }

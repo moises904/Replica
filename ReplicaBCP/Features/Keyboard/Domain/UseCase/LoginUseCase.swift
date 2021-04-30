@@ -8,7 +8,8 @@
 import Foundation
 
 protocol ILoginUseCase {
-    func execute(completion: @escaping(_ response:Result<LoginModel?, Error>) -> Void)
+    func execute(password:String,
+                 completion: @escaping(_ response:Result<LoginModel?, Error>) -> Void)
 }
 
 class LoginUseCase: ILoginUseCase {
@@ -19,8 +20,8 @@ class LoginUseCase: ILoginUseCase {
         self.loginProxy = loginProxy
     }
     
-    func execute(completion: @escaping (Result<LoginModel?, Error>) -> Void) {
-        self.loginProxy.LoginUser(modeOperation: .mockServices, completion: completion)
+    func execute(password:String, completion: @escaping (Result<LoginModel?, Error>) -> Void) {
+        self.loginProxy.LoginUser(modeOperation: .mockServices, password: password, completion: completion)
     }
     
     

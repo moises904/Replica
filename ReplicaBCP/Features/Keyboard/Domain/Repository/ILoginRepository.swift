@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ILoginRepository {
-    func LoginUser(modeOperation: ModeOperation,
+    func LoginUser(modeOperation: ModeOperation, password:String,
                    completion: @escaping(_ response:Result<LoginModel?, Error>)->Void)
 }

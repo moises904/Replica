@@ -9,15 +9,22 @@ import Foundation
 
 class KeyboardViewModel {
     
+    var keyboardModelLiveData: LiveData<KeyboardModel>?
+    var errorLoginLiveData: LiveData<String>
+    var successLoginLiveData: LiveData<LoginModel>
+    
     private let keyboardUseCase: GetKeyboardUseCase
     private let loginUseCase: LoginUseCase
-    var keyboardModelLiveData: LiveData<KeyboardModel>?
     
     init() {
+        
         self.keyboardUseCase = GetKeyboardUseCase()
         self.loginUseCase = LoginUseCase()
         
         self.keyboardModelLiveData = LiveData<KeyboardModel> (_value: KeyboardModel())
+        self.errorLoginLiveData = LiveData<String>(_value: "")
+        self.successLoginLiveData = LiveData<LoginModel> (_value: LoginModel(userName: "", lastName: ""))
+        
     }
     
     public func getDigitsKeyboard() {
@@ -39,20 +46,27 @@ class KeyboardViewModel {
     }
     
     func getLoginUser(positionsPassword: String) {
-            print("\(positionsPassword)")
+        
         let loginComplete: ((Result<LoginModel?, Error>)->Void) = {
+            
             result in
             
             switch result {
             case .success(let loginModel):
-                print("success loginModel on view model")
-                //self.keyboardModelLiveData?.value = loginModel!
+                self.successLoginLiveData.value = loginModel!
                 break
+                
+            case .failure(let error as LoginError):
+                print(error)
+                self.errorLoginLiveData.value = error.errorDescription!
+                break
+                
             default:
                 print("nada")
+                
             }
             
         }
-        loginUseCase.execute(completion: loginComplete)
+        loginUseCase.execute(password: positionsPassword,completion: loginComplete)
     }
 }

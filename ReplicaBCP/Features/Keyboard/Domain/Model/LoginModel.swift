@@ -8,10 +8,10 @@
 import Foundation
 
 struct LoginModel: DataLoginModel {
+    
     var userName: String
     var lastName: String
     
-
 }
 
 protocol DataLoginModel {

@@ -9,37 +9,48 @@ import Foundation
 
 class LoginProxy: ILoginRepository {
     
+    private let PASSWORD_MOCK = "888888"
     
-    
-    
-    func LoginUser(modeOperation: ModeOperation, completion: @escaping (Result<LoginModel?, Error>) -> Void) {
+    func LoginUser(modeOperation: ModeOperation, password:String, completion: @escaping (Result<LoginModel?, Error>) -> Void) {
     
         if( modeOperation == .realServices ) {
-            getLoginOnRealService()
+            _ = getLoginOnRealService()
         } else {
             
             do {
-                let loginModel =  try getLoginOnMockService ()
+                let loginModel =  try getLoginOnMockService (password:password)
                 completion(.success(loginModel))
+            } catch (let error) {
+                completion(.failure(error))
+                            
             } catch {
                 print("No se pudo cargar el mock -> \(error)")
-
+                completion(.failure(LoginError.unknowError))
             }
             
         }
         
     }
     
-    private func getLoginOnMockService() throws -> LoginModel?{
+    private func getLoginOnMockService(password:String) throws -> LoginModel?{
         print("Ejecuntando llamada a servicio Login mock")
+        
+        if (password == PASSWORD_MOCK) {
+            
         let loginResponse = try ReaderLocalJson.readerLocalData(nameFile:"LoginResponse")
         let jsonLogin = try JSONDecoder().decode(LoginResponse.self, from: loginResponse!)
         
-        if(jsonLogin.code == 200) {
-            print("Login 200")
-           // let dataConfig = transformKeyboard(keyboardResponse:jsonKeyboard)
-           // return dataConfig
+            if(jsonLogin.code == 200) {
+                let dataLogin = transformLoginResponse(loginResponse:jsonLogin)
+                return dataLogin
+            }
+            
+        } else {
+            throw LoginError.invalidPassword
+            
         }
+        
+        
         return nil
     }
 

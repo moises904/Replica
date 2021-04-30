@@ -43,6 +43,9 @@
 		B5C7A345263BE1B800D45727 /* DataInitialResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7A343263BE1B800D45727 /* DataInitialResponse.json */; };
 		B5C7A34F263BE36600D45727 /* KeyboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A34E263BE36600D45727 /* KeyboardResponse.swift */; };
 		B5C7A35F263BE61B00D45727 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A35E263BE61B00D45727 /* KeyboardViewModel.swift */; };
+		B5D8EFC5263C717F005D731F /* MappingLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8EFC4263C717F005D731F /* MappingLoginResponse.swift */; };
+		B5D8EFCA263C78A9005D731F /* BaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8EFC9263C78A9005D731F /* BaseErrors.swift */; };
+		B5D8EFCF263C7BE3005D731F /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8EFCE263C7BE3005D731F /* Alertable.swift */; };
 		B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */; };
 		B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */; };
 		B5DFA01D26339F240072C3D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01C26339F240072C3D5 /* Api.swift */; };
@@ -131,6 +134,9 @@
 		B5C7A343263BE1B800D45727 /* DataInitialResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataInitialResponse.json; sourceTree = "<group>"; };
 		B5C7A34E263BE36600D45727 /* KeyboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponse.swift; sourceTree = "<group>"; };
 		B5C7A35E263BE61B00D45727 /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		B5D8EFC4263C717F005D731F /* MappingLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingLoginResponse.swift; sourceTree = "<group>"; };
+		B5D8EFC9263C78A9005D731F /* BaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrors.swift; sourceTree = "<group>"; };
+		B5D8EFCE263C7BE3005D731F /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGetDataInitialRepository.swift; sourceTree = "<group>"; };
 		B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfigurationModel.swift; sourceTree = "<group>"; };
 		B5DFA01C26339F240072C3D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -248,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B50D5E3F263BF15300A48BF8 /* MapperKeboardResponse.swift */,
+				B5D8EFC4263C717F005D731F /* MappingLoginResponse.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -703,6 +710,7 @@
 				B5C7A342263BE0DC00D45727 /* UI */,
 				B5DFA09B26365BD10072C3D5 /* Colors */,
 				B5DFA08426355D2B0072C3D5 /* Bases */,
+				B5D8EFCE263C7BE3005D731F /* Alertable.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -712,6 +720,7 @@
 			children = (
 				B5DFA05D263520290072C3D5 /* BaseResponse.swift */,
 				B5DFA08526355D530072C3D5 /* BaseViewController.swift */,
+				B5D8EFC9263C78A9005D731F /* BaseErrors.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -1019,11 +1028,14 @@
 				B5C7A312263BDAB800D45727 /* IGetKeyboardRepository.swift in Sources */,
 				B5DFA01D26339F240072C3D5 /* Api.swift in Sources */,
 				B59FD2B2263C6D0B0028C33A /* LoginResponse.swift in Sources */,
+				B5D8EFC5263C717F005D731F /* MappingLoginResponse.swift in Sources */,
 				B5C7A33B263BE0A200D45727 /* KeyboardProxy.swift in Sources */,
 				B5DFA03E2633AA750072C3D5 /* DataInitialProxy.swift in Sources */,
+				B5D8EFCF263C7BE3005D731F /* Alertable.swift in Sources */,
 				B50D5E40263BF15300A48BF8 /* MapperKeboardResponse.swift in Sources */,
 				B5C7A31C263BDDCB00D45727 /* GetKeyboardUseCase.swift in Sources */,
 				B5DFA02326339F6F0072C3D5 /* DataInitialRepository.swift in Sources */,
+				B5D8EFCA263C78A9005D731F /* BaseErrors.swift in Sources */,
 				B5988BAB26321BE9003F0780 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
