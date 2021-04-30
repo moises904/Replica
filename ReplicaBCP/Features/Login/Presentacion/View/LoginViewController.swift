@@ -74,6 +74,10 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     private func goToKeyboard() {
-        print("Teclado")
+        let storyboard =  UIStoryboard(name: "Keyboard", bundle: nil)
+        let keyboardViewController = storyboard.instantiateViewController(identifier:"KeyboardViewControllerID") as? KeyboardViewController
+        keyboardViewController?.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(keyboardViewController!, animated: true, completion: nil)
+        
     }
 }

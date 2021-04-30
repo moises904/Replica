@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		95E3CB15E568B3EAD9E7AD55 /* Pods_ReplicaBCP_ReplicaBCPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */; };
 		B57EB74A263B8E4F0038532F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB749263B8E4F0038532F /* Util.swift */; };
+		B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57EB750263BB44D0038532F /* Keyboard.storyboard */; };
+		B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB755263BB4DC0038532F /* KeboardViewController.swift */; };
+		B57EB75B263BBB460038532F /* cerrar.png in Resources */ = {isa = PBXBuildFile; fileRef = B57EB75A263BBB460038532F /* cerrar.png */; };
 		B5988BA926321BE9003F0780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988BA826321BE9003F0780 /* AppDelegate.swift */; };
 		B5988BAB26321BE9003F0780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988BAA26321BE9003F0780 /* SceneDelegate.swift */; };
 		B5988BAD26321BE9003F0780 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988BAC26321BE9003F0780 /* SplashViewController.swift */; };
@@ -21,6 +24,8 @@
 		B5988C2026323950003F0780 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5988C1F26323950003F0780 /* Home.storyboard */; };
 		B5988C2526323A06003F0780 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988C2426323A06003F0780 /* LoginViewController.swift */; };
 		B5988C2A26323A28003F0780 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988C2926323A28003F0780 /* HomeViewController.swift */; };
+		B5C7A308263BC27500D45727 /* KeyboatdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */; };
+		B5C7A30D263BC96B00D45727 /* Extension+UIBotton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */; };
 		B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */; };
 		B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */; };
 		B5DFA01D26339F240072C3D5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA01C26339F240072C3D5 /* Api.swift */; };
@@ -70,6 +75,9 @@
 		57A2129BA586A001D7C9F488 /* Pods_ReplicaBCP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737A207E35B87CFAB6000DAF /* Pods_ReplicaBCP_ReplicaBCPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReplicaBCP_ReplicaBCPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57EB749263B8E4F0038532F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B57EB750263BB44D0038532F /* Keyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
+		B57EB755263BB4DC0038532F /* KeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeboardViewController.swift; sourceTree = "<group>"; };
+		B57EB75A263BBB460038532F /* cerrar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerrar.png; sourceTree = "<group>"; };
 		B5988BA526321BE9003F0780 /* ReplicaBCP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReplicaBCP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5988BA826321BE9003F0780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5988BAA26321BE9003F0780 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +96,8 @@
 		B5988C1F26323950003F0780 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B5988C2426323A06003F0780 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B5988C2926323A28003F0780 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboatdCollectionViewCell.swift; sourceTree = "<group>"; };
+		B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIBotton.swift"; sourceTree = "<group>"; };
 		B5DFA00D26339BA80072C3D5 /* IGetDataInitialRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGetDataInitialRepository.swift; sourceTree = "<group>"; };
 		B5DFA01726339E370072C3D5 /* DataConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfigurationModel.swift; sourceTree = "<group>"; };
 		B5DFA01C26339F240072C3D5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -162,6 +172,24 @@
 				2B626EE18DA1B2AEBEC96222 /* Pods_ReplicaBCPTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B57EB74E263BB4280038532F /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B57EB74F263BB4360038532F /* View */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		B57EB74F263BB4360038532F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B57EB750263BB44D0038532F /* Keyboard.storyboard */,
+				B57EB755263BB4DC0038532F /* KeboardViewController.swift */,
+				B5C7A307263BC27500D45727 /* KeyboatdCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5988B9C26321BE9003F0780 = {
@@ -247,6 +275,7 @@
 		B5988BF0263234C1003F0780 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B57EB74E263BB4280038532F /* Keyboard */,
 				B5988BF62632357D003F0780 /* Home */,
 				B5988BF526323570003F0780 /* Login */,
 				B5988BF1263234D2003F0780 /* Splash */,
@@ -468,6 +497,7 @@
 				B5DFA09B26365BD10072C3D5 /* Colors */,
 				B5DFA08426355D2B0072C3D5 /* Bases */,
 				B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */,
+				B5C7A30C263BC96B00D45727 /* Extension+UIBotton.swift */,
 			);
 			path = commons;
 			sourceTree = "<group>";
@@ -492,6 +522,7 @@
 		B5DFA0C8263774190072C3D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B57EB75A263BBB460038532F /* cerrar.png */,
 				B5DFA0E42637D6090072C3D5 /* ico_ubicacion.png */,
 				B5DFA0AD26376BC10072C3D5 /* splash_logo.json */,
 				B5DFA0B226376BC90072C3D5 /* splash_iso.json */,
@@ -607,6 +638,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57EB75B263BBB460038532F /* cerrar.png in Resources */,
 				B5DFA0392633A2F70072C3D5 /* DataInitial.json in Resources */,
 				B5988C1A2632392B003F0780 /* Login.storyboard in Resources */,
 				B5DFA0E52637D6090072C3D5 /* ico_ubicacion.png in Resources */,
@@ -614,6 +646,7 @@
 				B5DFA0AE26376BC10072C3D5 /* splash_logo.json in Resources */,
 				B5DFA0B326376BC90072C3D5 /* splash_iso.json in Resources */,
 				B5988BB526321BEB003F0780 /* LaunchScreen.storyboard in Resources */,
+				B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */,
 				B5988BB226321BEB003F0780 /* Assets.xcassets in Resources */,
 				B5988BB026321BE9003F0780 /* Splash.storyboard in Resources */,
 			);
@@ -746,6 +779,7 @@
 				B5DFA05E263520290072C3D5 /* BaseResponse.swift in Sources */,
 				B5988C2A26323A28003F0780 /* HomeViewController.swift in Sources */,
 				B5DFA07F263559070072C3D5 /* LiveData.swift in Sources */,
+				B5C7A30D263BC96B00D45727 /* Extension+UIBotton.swift in Sources */,
 				B5DFA0302633A0380072C3D5 /* DataInitialResponse.swift in Sources */,
 				B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */,
 				B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */,
@@ -760,6 +794,8 @@
 				B5DFA05826351F730072C3D5 /* ReaderLocalJson.swift in Sources */,
 				B5DFA09D26366A020072C3D5 /* Extension+UILabel.swift in Sources */,
 				B5DFA04C2633B3910072C3D5 /* SplashViewModel.swift in Sources */,
+				B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */,
+				B5C7A308263BC27500D45727 /* KeyboatdCollectionViewCell.swift in Sources */,
 				B5DFA06A263529C10072C3D5 /* MappingResponse.swift in Sources */,
 				B5DFA01D26339F240072C3D5 /* Api.swift in Sources */,
 				B5DFA03E2633AA750072C3D5 /* DataInitialProxy.swift in Sources */,
