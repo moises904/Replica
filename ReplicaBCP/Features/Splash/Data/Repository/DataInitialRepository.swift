@@ -7,15 +7,10 @@
 
 import Foundation
 
-class DataInitialRepository {
-    
-    /*
-    func getDataInitial(modeOperation: ModeOperation, completion: @escaping(_ response:Result<DataConfigurationModel?, Error>) -> Void)->DataConfigurationModel? {
-        
-        let comple = ((Result<DataConfiguration?, Error>)->Void = {
-            
-        }
-        
+class DataInitialRepository: IGetDataInitialRepository {
+    func getDataInitial(modeOperation: ModeOperation,
+                        completion: @escaping (Result<DataConfigurationModel?, Error>) -> Void) {
+        //Aqui se llama a la API Remote
     }
-    */
+    
 }

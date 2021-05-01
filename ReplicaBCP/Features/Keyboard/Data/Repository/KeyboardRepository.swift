@@ -7,6 +7,11 @@
 
 import Foundation
 
-class KeyboardRepository {
+class KeyboardRepository:IGetKeyboardRepository {
+    func getRandomKeyboard(modeOperation: ModeOperation,
+                           completion: @escaping (Result<KeyboardModel?, Error>) -> Void) {
+        //Aqui se llama a la API - Remote
+    }
+    
     
 }
