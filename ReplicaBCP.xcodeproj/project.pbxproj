@@ -16,6 +16,7 @@
 		B556EF8E263CD0B100298CB2 /* candado.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF8D263CD0B100298CB2 /* candado.png */; };
 		B556EF93263CD0FE00298CB2 /* ingresos.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF92263CD0FE00298CB2 /* ingresos.png */; };
 		B556EF98263CD12B00298CB2 /* regalo.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF97263CD12B00298CB2 /* regalo.png */; };
+		B556EFAE263D06A400298CB2 /* BcpColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556EFAD263D06A400298CB2 /* BcpColors.swift */; };
 		B57EB74A263B8E4F0038532F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB749263B8E4F0038532F /* Util.swift */; };
 		B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57EB750263BB44D0038532F /* Keyboard.storyboard */; };
 		B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB755263BB4DC0038532F /* KeboardViewController.swift */; };
@@ -67,7 +68,6 @@
 		B5DFA06A263529C10072C3D5 /* MappingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA069263529C10072C3D5 /* MappingResponse.swift */; };
 		B5DFA07F263559070072C3D5 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA07E263559070072C3D5 /* LiveData.swift */; };
 		B5DFA08626355D530072C3D5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA08526355D530072C3D5 /* BaseViewController.swift */; };
-		B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA096263654350072C3D5 /* BcpColors.swift */; };
 		B5DFA09D26366A020072C3D5 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */; };
 		B5DFA0AE26376BC10072C3D5 /* splash_logo.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DFA0AD26376BC10072C3D5 /* splash_logo.json */; };
 		B5DFA0B326376BC90072C3D5 /* splash_iso.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DFA0B226376BC90072C3D5 /* splash_iso.json */; };
@@ -109,6 +109,7 @@
 		B556EF8D263CD0B100298CB2 /* candado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = candado.png; sourceTree = "<group>"; };
 		B556EF92263CD0FE00298CB2 /* ingresos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingresos.png; sourceTree = "<group>"; };
 		B556EF97263CD12B00298CB2 /* regalo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regalo.png; sourceTree = "<group>"; };
+		B556EFAD263D06A400298CB2 /* BcpColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BcpColors.swift; sourceTree = "<group>"; };
 		B57EB749263B8E4F0038532F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B57EB750263BB44D0038532F /* Keyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
 		B57EB755263BB4DC0038532F /* KeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeboardViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +167,6 @@
 		B5DFA069263529C10072C3D5 /* MappingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingResponse.swift; sourceTree = "<group>"; };
 		B5DFA07E263559070072C3D5 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
 		B5DFA08526355D530072C3D5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		B5DFA096263654350072C3D5 /* BcpColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BcpColors.swift; sourceTree = "<group>"; };
 		B5DFA09C26366A020072C3D5 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
 		B5DFA0AD26376BC10072C3D5 /* splash_logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash_logo.json; sourceTree = "<group>"; };
 		B5DFA0B226376BC90072C3D5 /* splash_iso.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash_iso.json; sourceTree = "<group>"; };
@@ -744,7 +744,7 @@
 		B5DFA09B26365BD10072C3D5 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				B5DFA096263654350072C3D5 /* BcpColors.swift */,
+				B556EFAD263D06A400298CB2 /* BcpColors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -1034,7 +1034,6 @@
 				B5C7A30D263BC96B00D45727 /* Extension+UIBotton.swift in Sources */,
 				B5DFA0302633A0380072C3D5 /* DataInitialResponse.swift in Sources */,
 				B5DFA01826339E370072C3D5 /* DataConfigurationModel.swift in Sources */,
-				B5DFA097263654350072C3D5 /* BcpColors.swift in Sources */,
 				B5DFA08626355D530072C3D5 /* BaseViewController.swift in Sources */,
 				B59FD2A8263C6B360028C33A /* ILoginRepository.swift in Sources */,
 				B5C7A317263BDB2800D45727 /* KeyboardModel.swift in Sources */,
@@ -1043,6 +1042,7 @@
 				B5988BAD26321BE9003F0780 /* SplashViewController.swift in Sources */,
 				B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */,
 				B5C7A34F263BE36600D45727 /* KeyboardResponse.swift in Sources */,
+				B556EFAE263D06A400298CB2 /* BcpColors.swift in Sources */,
 				B57EB74A263B8E4F0038532F /* Util.swift in Sources */,
 				B59FD299263C6A2C0028C33A /* LoginModel.swift in Sources */,
 				B5C7A35F263BE61B00D45727 /* KeyboardViewModel.swift in Sources */,
