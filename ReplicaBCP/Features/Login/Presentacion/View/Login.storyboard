@@ -111,9 +111,6 @@
             <point key="canvasLocation" x="-1162.3188405797102" y="-698.4375"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="nTh-8A-4Id"/>
-    </designables>
     <resources>
         <image name="ico_ubicacion.png" width="48" height="48"/>
         <systemColor name="linkColor">

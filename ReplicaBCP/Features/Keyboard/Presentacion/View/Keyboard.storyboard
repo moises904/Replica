@@ -104,6 +104,7 @@
                         <outlet property="keyboardCollectionView" destination="8FQ-2S-9dZ" id="Oya-FG-mp7"/>
                         <outlet property="labelPasswordLabel" destination="V6Y-pf-Koq" id="NRs-Tu-BEZ"/>
                         <outlet property="passwordHideLabel" destination="V6Y-pf-Koq" id="Jb1-SQ-YhW"/>
+                        <outlet property="titleKeyboardLabel" destination="ikB-Ka-TKG" id="taa-Qv-5fU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59h-2A-Il4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

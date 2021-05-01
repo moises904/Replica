@@ -15,10 +15,15 @@ extension UILabel {
         self.sizeToFit()
      }
     
+    func configureDarkTitleLabel() {
+        self.textColor = BcpColors.BlueBcpPrimary
+       self.font = .systemFont(ofSize: 20, weight:.bold)
+       self.sizeToFit()
+    }
     
     func configurePasswordLabel() {
         self.textColor = BcpColors.BlueBcpPrimary
-        self.font = .systemFont(ofSize: 20, weight:.bold)
+        self.font = .systemFont(ofSize: 25, weight:.bold)
         self.sizeToFit()
     }
     

@@ -10,19 +10,22 @@ import UIKit
 class KeyboardViewController : UIViewController, UICollectionViewDelegate,
                                UICollectionViewDataSource, IBaseViewController, Alertable {
 
-    
+    @IBOutlet weak var titleKeyboardLabel: UILabel!
     @IBOutlet weak var passwordHideLabel: UILabel!
     @IBOutlet weak var forgetPassword: UILabel!
     @IBOutlet weak var keyboardCollectionView: UICollectionView!
     @IBOutlet weak var closeImageView: UIImageView!
     @IBOutlet weak var labelPasswordLabel: UILabel!
-    
+    private var comunicatorViewController: ComunicationViewController? = nil
     private let keyboardViewModel: KeyboardViewModel = KeyboardViewModel()
     private var keyboardModel: KeyboardModel = KeyboardModel()
     private var pivote:Int = 0
     private let DIGITS_PASSWROD = 6
     private var positionsForPassword: String = ""
     
+    public func comunicatiorViewController(comunication: ComunicationViewController) {
+        self.comunicatorViewController = comunication
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,7 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
         self.closeImageView.addGestureRecognizer(tap)
         self.keyboardCollectionView.delegate = self
         self.keyboardCollectionView.dataSource = self
+        self.titleKeyboardLabel.configureDarkTitleLabel()
         self.forgetPassword.configureTextLink()
         self.passwordHideLabel.configurePasswordLabel()
     }
@@ -108,10 +112,10 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
         
         self.keyboardViewModel.successLoginLiveData.observe {
             resultSuccessLogin in
-            let welcomeUser = "Bienvenido " + resultSuccessLogin.userName + " , " + resultSuccessLogin.lastName
-            self.showAlert(message: welcomeUser)
-            //self.dismiss(animated: true, completion:nil)
-
+            //let welcomeUser = "Bienvenido " + resultSuccessLogin.userName + " , " + resultSuccessLogin.lastName
+            //self.showAlert(message: welcomeUser)
+            self.dismiss(animated: true, completion:nil)
+            self.comunicatorViewController?.eventToViewController(dataUser: resultSuccessLogin)
         }
     }
 }

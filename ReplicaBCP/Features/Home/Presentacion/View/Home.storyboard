@@ -15,9 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="2j5-dK-bAD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="PHI-Fe-owA"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-fr-Wm6">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZDY-9c-oq8"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZGd-K7-6gy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z6n-nS-dTh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aQK-fr-Wm6" firstAttribute="centerX" secondItem="2j5-dK-bAD" secondAttribute="centerX" id="Opd-k4-eeW"/>
+                            <constraint firstItem="aQK-fr-Wm6" firstAttribute="centerY" secondItem="2j5-dK-bAD" secondAttribute="centerY" id="VC9-bn-mgS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="view" destination="2j5-dK-bAD" id="hJU-44-C2S"/>
+                        <outlet property="welcomeUserLabel" destination="aQK-fr-Wm6" id="did-wY-gNE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNC-wR-NHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

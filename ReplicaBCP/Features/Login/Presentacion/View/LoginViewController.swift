@@ -8,7 +8,12 @@
 import UIKit
 import Lottie
 
-class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+protocol ComunicationViewController {
+    func eventToViewController(dataUser: LoginModel)
+}
+
+class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,                                            ComunicationViewController {
+    
     
     @IBOutlet weak var greattingAnimationView: AnimationView!
     @IBOutlet weak var lblTitleGreats: UILabel!
@@ -90,15 +95,24 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     private func goToKeyboard() {
         let storyboard =  UIStoryboard(name: "Keyboard", bundle: nil)
         let keyboardViewController = storyboard.instantiateViewController(identifier:"KeyboardViewControllerID") as? KeyboardViewController
+        keyboardViewController?.comunicatiorViewController(comunication: self)
         keyboardViewController?.modalPresentationStyle = .fullScreen
         self.navigationController?.present(keyboardViewController!, animated: true, completion: nil)
         
     }
     
-    private func goToHome() {
+    private func goToHome(dataUser: LoginModel) {
         let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(identifier:"HomeStoryboardID") as? KeyboardViewController
+        let homeViewController = storyboard.instantiateViewController(identifier:"HomeStoryboardID") as? HomeViewController
+        homeViewController?.setDataLoginUser(dataUser: dataUser)
         self.navigationController?.pushViewController(homeViewController!, animated: true)
         
     }
+    
+    func eventToViewController(dataUser: LoginModel) {
+        if ( dataUser.userName.count > 0) {
+            goToHome(dataUser: dataUser)
+        }
+    }
+   
 }
