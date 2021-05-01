@@ -16,7 +16,7 @@
 		B556EF8E263CD0B100298CB2 /* candado.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF8D263CD0B100298CB2 /* candado.png */; };
 		B556EF93263CD0FE00298CB2 /* ingresos.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF92263CD0FE00298CB2 /* ingresos.png */; };
 		B556EF98263CD12B00298CB2 /* regalo.png in Resources */ = {isa = PBXBuildFile; fileRef = B556EF97263CD12B00298CB2 /* regalo.png */; };
-		B556EFAE263D06A400298CB2 /* BcpColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556EFAD263D06A400298CB2 /* BcpColors.swift */; };
+		B556EFAE263D06A400298CB2 /* BcpCustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556EFAD263D06A400298CB2 /* BcpCustomColors.swift */; };
 		B57EB74A263B8E4F0038532F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB749263B8E4F0038532F /* Util.swift */; };
 		B57EB751263BB44D0038532F /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57EB750263BB44D0038532F /* Keyboard.storyboard */; };
 		B57EB756263BB4DC0038532F /* KeboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EB755263BB4DC0038532F /* KeboardViewController.swift */; };
@@ -109,7 +109,7 @@
 		B556EF8D263CD0B100298CB2 /* candado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = candado.png; sourceTree = "<group>"; };
 		B556EF92263CD0FE00298CB2 /* ingresos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingresos.png; sourceTree = "<group>"; };
 		B556EF97263CD12B00298CB2 /* regalo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regalo.png; sourceTree = "<group>"; };
-		B556EFAD263D06A400298CB2 /* BcpColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BcpColors.swift; sourceTree = "<group>"; };
+		B556EFAD263D06A400298CB2 /* BcpCustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BcpCustomColors.swift; sourceTree = "<group>"; };
 		B57EB749263B8E4F0038532F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B57EB750263BB44D0038532F /* Keyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
 		B57EB755263BB4DC0038532F /* KeboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeboardViewController.swift; sourceTree = "<group>"; };
@@ -744,7 +744,7 @@
 		B5DFA09B26365BD10072C3D5 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				B556EFAD263D06A400298CB2 /* BcpColors.swift */,
+				B556EFAD263D06A400298CB2 /* BcpCustomColors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -1042,7 +1042,7 @@
 				B5988BAD26321BE9003F0780 /* SplashViewController.swift in Sources */,
 				B5DFA00E26339BA80072C3D5 /* IGetDataInitialRepository.swift in Sources */,
 				B5C7A34F263BE36600D45727 /* KeyboardResponse.swift in Sources */,
-				B556EFAE263D06A400298CB2 /* BcpColors.swift in Sources */,
+				B556EFAE263D06A400298CB2 /* BcpCustomColors.swift in Sources */,
 				B57EB74A263B8E4F0038532F /* Util.swift in Sources */,
 				B59FD299263C6A2C0028C33A /* LoginModel.swift in Sources */,
 				B5C7A35F263BE61B00D45727 /* KeyboardViewModel.swift in Sources */,

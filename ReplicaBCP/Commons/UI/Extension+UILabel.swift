@@ -16,13 +16,13 @@ extension UILabel {
      }
     
     func configureDarkTitleLabel() {
-        self.textColor = BcpColors.BlueBcpPrimary
+        self.textColor = BcpCustomColors.BlueBcpPrimary
        self.font = .systemFont(ofSize: 20, weight:.bold)
        self.sizeToFit()
     }
     
     func configurePasswordLabel() {
-        self.textColor = BcpColors.BlueBcpPrimary
+        self.textColor = BcpCustomColors.BlueBcpPrimary
         self.font = .systemFont(ofSize: 25, weight:.bold)
         self.sizeToFit()
     }
@@ -36,7 +36,7 @@ extension UILabel {
     }
     
     func configureTextLink() {
-        self.textColor = BcpColors.OrangeBcpPrimary
+        self.textColor = BcpCustomColors.OrangeBcpPrimary
         self.font = .systemFont(ofSize: 16, weight:.bold)
         self.textAlignment = .center
         self.sizeToFit()

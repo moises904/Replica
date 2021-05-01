@@ -35,8 +35,8 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     private func initializationView() {
         self.lblTitleGreats.configureTitleLabel()
-        self.view1.backgroundColor = BcpColors.BlueBcpPrimary
-        self.optionsCollectionView.backgroundColor = BcpColors.BlueBcpPrimary
+        self.view1.backgroundColor = BcpCustomColors.BlueBcpPrimary
+        self.optionsCollectionView.backgroundColor = BcpCustomColors.BlueBcpPrimary
         self.optionsCollectionView.delegate = self
         self.optionsCollectionView.dataSource = self
     }
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         greattingAnimationView?.contentMode = .scaleAspectFill
         let pathAnimation = Bundle.main.path(forResource: "content", ofType: "json")
         let animation = Animation.filepath(pathAnimation ?? "")
-        greattingAnimationView?.backgroundColor = BcpColors.BlueBcpPrimary
+        greattingAnimationView?.backgroundColor = BcpCustomColors.BlueBcpPrimary
         greattingAnimationView?.animation = animation
         greattingAnimationView?.loopMode = .loop
         greattingAnimationView?.animationSpeed = 0.5

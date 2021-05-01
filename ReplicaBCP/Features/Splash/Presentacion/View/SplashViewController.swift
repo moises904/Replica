@@ -22,7 +22,7 @@ class SplashViewController: UIViewController, IBaseViewController {
     }
     
     private func initializeView() {
-        self.view.backgroundColor = BcpColors.BlueBcpPrimary
+        self.view.backgroundColor = BcpCustomColors.BlueBcpPrimary
         loadAnimation()
         hideNavigationBar()
     }
@@ -31,7 +31,7 @@ class SplashViewController: UIViewController, IBaseViewController {
         animationSplash?.contentMode = .scaleAspectFill
         let pathAnimation = Bundle.main.path(forResource: "splash_logo", ofType: "json")
         let animation = Animation.filepath(pathAnimation ?? "")
-        animationSplash?.backgroundColor = BcpColors.BlueBcpPrimary
+        animationSplash?.backgroundColor = BcpCustomColors.BlueBcpPrimary
         animationSplash?.animation = animation
         animationSplash?.loopMode = .loop
         animationSplash?.animationSpeed = 0.5
