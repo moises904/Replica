@@ -11,6 +11,8 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
                                UICollectionViewDataSource, IBaseViewController, Alertable {
 
     
+    @IBOutlet weak var passwordHideLabel: UILabel!
+    @IBOutlet weak var forgetPassword: UILabel!
     @IBOutlet weak var keyboardCollectionView: UICollectionView!
     @IBOutlet weak var closeImageView: UIImageView!
     @IBOutlet weak var labelPasswordLabel: UILabel!
@@ -40,7 +42,8 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
         self.closeImageView.addGestureRecognizer(tap)
         self.keyboardCollectionView.delegate = self
         self.keyboardCollectionView.dataSource = self
-        
+        self.forgetPassword.configureTextLink()
+        self.passwordHideLabel.configurePasswordLabel()
     }
  
     @objc private func closeKeyboard() {

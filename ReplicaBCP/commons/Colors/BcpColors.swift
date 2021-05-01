@@ -10,4 +10,5 @@ import UIKit
 enum BcpColors {
     
     static let BlueBcpPrimary = UIColor(named: "BcpPrimaryColor")
+    static let OrangeBcpPrimary = UIColor(named: "BcpSecundaryColor")
 }

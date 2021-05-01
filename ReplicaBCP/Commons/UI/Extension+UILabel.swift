@@ -18,7 +18,7 @@ extension UILabel {
     
     func configurePasswordLabel() {
         self.textColor = BcpColors.BlueBcpPrimary
-        self.font = .systemFont(ofSize: 18, weight:.bold)
+        self.font = .systemFont(ofSize: 20, weight:.bold)
         self.sizeToFit()
     }
     
@@ -28,5 +28,14 @@ extension UILabel {
         self.font = .systemFont(ofSize: 15, weight:.regular)
         self.textAlignment = .center
         self.sizeToFit()
+    }
+    
+    func configureTextLink() {
+        self.textColor = BcpColors.OrangeBcpPrimary
+        self.font = .systemFont(ofSize: 16, weight:.bold)
+        self.textAlignment = .center
+        self.sizeToFit()
+
+
     }
 }
