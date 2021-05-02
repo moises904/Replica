@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     }
     
     func initializeView() {
+        
         if (self.dataUser != nil) {
             self.welcomeUserLabel.configureDarkTitleLabel()
             self.welcomeUserLabel.numberOfLines = 2

@@ -16,16 +16,14 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var keyboardCollectionView: UICollectionView!
     @IBOutlet weak var closeImageView: UIImageView!
     @IBOutlet weak var labelPasswordLabel: UILabel!
-    private var comunicatorViewController: ComunicationViewController? = nil
+    
+    var comunicationDelegate: ComunicationDelegate? = nil
+    
     private let keyboardViewModel: KeyboardViewModel = KeyboardViewModel()
     private var keyboardModel: KeyboardModel = KeyboardModel()
     private var pivote:Int = 0
     private let DIGITS_PASSWROD = 6
     private var positionsForPassword: String = ""
-    
-    public func comunicatiorViewController(comunication: ComunicationViewController) {
-        self.comunicatorViewController = comunication
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,10 +110,8 @@ class KeyboardViewController : UIViewController, UICollectionViewDelegate,
         
         self.keyboardViewModel.successLoginLiveData.observe {
             resultSuccessLogin in
-            //let welcomeUser = "Bienvenido " + resultSuccessLogin.userName + " , " + resultSuccessLogin.lastName
-            //self.showAlert(message: welcomeUser)
             self.dismiss(animated: true, completion:nil)
-            self.comunicatorViewController?.eventToViewController(dataUser: resultSuccessLogin)
+            self.comunicationDelegate?.eventToViewController(dataUser: resultSuccessLogin)
         }
     }
 }

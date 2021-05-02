@@ -8,21 +8,24 @@
 import UIKit
 import Lottie
 
-protocol ComunicationViewController {
+protocol ComunicationDelegate {
     func eventToViewController(dataUser: LoginModel)
 }
 
-class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,                                            ComunicationViewController {
+class LoginViewController: UIViewController, UICollectionViewDelegate,
+                           UICollectionViewDataSource, ComunicationDelegate {
     
     
     @IBOutlet weak var greattingAnimationView: AnimationView!
     @IBOutlet weak var lblTitleGreats: UILabel!
     @IBOutlet var view1: UIView!
     @IBOutlet weak var optionsCollectionView: UICollectionView!
+    
     private let namesOptions = [0: "Transferir\ndinero", 1: "Ingresar", 2: "Ubícanos",
-                                      3: "Token Digital", 4 : "Bloqueo\nde tarjeta", 5: "Para ti"]
+                               3: "Token Digital", 4 : "Bloqueo\nde tarjeta", 5: "Para ti"]
     private let imagesOptions = [0:"transfer.png",1:"ingresos.png",2:"map.png",
-                                 3:"chip.png",4:"candado.png",5:"regalo.png"]
+                                3:"chip.png",4:"candado.png",5:"regalo.png"]
+    
     private var pivote = 0
     var dataConfiguration: DataConfigurationModel? = nil
     
@@ -95,7 +98,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     private func goToKeyboard() {
         let storyboard =  UIStoryboard(name: "Keyboard", bundle: nil)
         let keyboardViewController = storyboard.instantiateViewController(identifier:"KeyboardViewControllerID") as? KeyboardViewController
-        keyboardViewController?.comunicatiorViewController(comunication: self)
+        keyboardViewController?.comunicationDelegate = self
         keyboardViewController?.modalPresentationStyle = .fullScreen
         self.navigationController?.present(keyboardViewController!, animated: true, completion: nil)
         

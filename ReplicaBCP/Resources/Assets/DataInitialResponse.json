@@ -1,7 +1,7 @@
 {
     "code": 200,
     "dataConfig": {
-        "time": 2,
+        "time": 5,
         "greats": 1,
         "sounds": false
     }
