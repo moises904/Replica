@@ -105,9 +105,14 @@ class LoginViewController: UIViewController, UICollectionViewDelegate,
     }
     
     private func goToHome(dataUser: LoginModel) {
+        
+        
         let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(identifier:"HomeStoryboardID") as? HomeViewController
-        homeViewController?.setDataLoginUser(dataUser: dataUser)
+        let homeViewController = storyboard.instantiateViewController(identifier:"HomeStoryboardID") as? HomeViewController        
+        homeViewController?.completionHandler = { 
+            return dataUser
+        }
+        
         self.navigationController?.pushViewController(homeViewController!, animated: true)
         
     }

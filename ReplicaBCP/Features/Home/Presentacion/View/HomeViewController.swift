@@ -13,18 +13,15 @@ class HomeViewController: UIViewController {
     @IBOutlet var view1: UIView!
     
     private var dataUser:LoginModel? = nil
-    
+    var completionHandler:(()->LoginModel)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeView()
     }
     
-    func setDataLoginUser(dataUser: LoginModel) {
-        self.dataUser = dataUser
-    }
-    
     func initializeView() {
-        
+        self.dataUser = (self.completionHandler!())
         if (self.dataUser != nil) {
             self.welcomeUserLabel.configureDarkTitleLabel()
             self.welcomeUserLabel.numberOfLines = 2
